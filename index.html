@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="ttps://www.gstatic.com/firebasejs/8.3.1/firebase-app.js">
+</script>viewport" content="width=device-width">
+<title>repl.it</title>
+<link href="reset.css" rel="stylesheet" type="text/css" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="h
+<script src=" https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js ">
+</script>
+<!-- https://firebase.google.com/docs/web/setup#available-libraries -->
+<script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyCVVjR7y6jfFuPRiCsQ_hd72On7dynFkJc ",
+    authDomain: "mastermind-391cd.firebaseapp.com ",
+    databaseURL: "https://mastermind-391cd-default-rtdb.firebaseio.com ",
+    projectId: "mastermind-391cd ",
+    storageBucket: "mastermind-391cd.appspot.com ",
+    messagingSenderId: "793503587833 ",
+    appId: "1:793503587833:web:74db2822cf0bab81693128 "
+  };
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+<style>
+
+.board {
+  display: flex;
+  flex-direction: column;
+}
+
+.code {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid lightgray;
+  width: 110px;
+  height: 22px;
+}
+
+.digit {
+  border: 1px solid gray;
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 20px;
+}
+
+.digit.editable {
+  border: 1px solid pink;
+}
+
+.feedback {
+  display: flex;
+  flex-wrap: wrap;
+  width: 22px;
+  height: 22px;
+}
+
+.feedback > span {
+  height: 9px;
+  width: 9px;
+  border: 1px solid gray;
+}
+
+.feedback > span {
+  background: lightgray;
+}
+.feedback > span.red {
+  background: darkred;
+}
+
+.feedback > span.white {
+  background: white;
+}
+
+</style>
+
+<body><h1>hello, world!</h1></body>
+
+<div id='board'>
+  <div class='code guess'>
+    <span class='digit'>R</span>
+    <span class='digit'>G</span>
+    <span class='digit'>U</span>
+    <span class='digit'>Y</span>
+    <span class='feedback'>
+      <span class='red'></span>
+      <span class='red'></span>
+      <span class='white'></span>
+      <span></span>
+    </span>
+  </div>
+  <div class='code guess'>
+    <span class='digit editable'></span>
+    <span class='digit editable'></span>
+    <span class='digit editable'></span>
+    <span class='digit editable'></span>
+  </div>
+  <div class='code guess'></div>
+  <div class='code guess'></div>
+  <div class='code guess'></div>
+  <div class='code guess'></div>
+  <div class='code guess'></div>
+  <div class='code guess'></div>
+  <div class='code guess'></div>
+  <div class='code guess'></div>
+  <div class='code guess'></div>
+
+  <div class='code secret'>
+    <span class='digit'>R</span>
+    <span class='digit'>G</span>
+    <span class='digit'>B</span>
+    <span class='digit'>U</span>
+  </div>
+</div>
+
+<script>
+  var mm_game = {
+    'guesses': [
+      ['R', 'G', 'U', 'G'],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+    ],
+    'answer': ['R', 'G', 'B', 'U']
+  }
+  
+  // var rooms_ref = firebase.database().ref('rooms/a/guesses');
+  // rooms_ref.on('value', (response) => {
+  //   const teachers = response.val();
+  //   console.log(teachers);
+  //   for (var t of teachers) {
+  //     document.body.append(`- ${t} \n`)
+  //   }
+  // });
+</script>
